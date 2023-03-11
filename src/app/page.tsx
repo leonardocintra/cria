@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Categoria from "./components/Home/Categoria";
+import ProdutoCard from "./components/Home/ProdutoCard";
 
 export default function Home() {
   return (
@@ -6,18 +8,18 @@ export default function Home() {
       <div className="flex justify-center">
         <div className="p-4  md:w-1/2">
           <div className="md:flex items-center space-x-3 p-5">
-            <h1 className="text-3xl font-bold text-red-900/80 font-sono">
+            <h1 className="text-3xl md:text-5xl font-bold text-red-900/80 font-sono">
               Cristo Rei
             </h1>
-            <h4 className="font-calligraffitti text-xl">
+            <h4 className="font-calligraffitti text-2xl">
               Implementos agrícolas
             </h4>
           </div>
           <div className="font-poppins flex flex-col">
-            <span className="font-bold text-4xl">
+            <span className="font-bold text-2xl md:text-4xl text-orange-900 pl-4">
               Facilitando seu trabalho no campo.
             </span>
-            <span className="font-extrabold md:text-3xl text-left mt-5">
+            <span className="md:text-3xl mt-5 text-orange-400 text-end font-extralight italic">
               Implementos simples, práticos e muito eficientes para tornar seu
               trabalho mais fácil
             </span>
@@ -31,6 +33,8 @@ export default function Home() {
           alt={"logo"}
         />
       </div>
+      <Categoria />
+      <ProdutoCard titulo="Rosca Esparramadora" />
     </main>
   );
 }
