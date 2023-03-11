@@ -43,8 +43,8 @@ const produtos: IProdutoDetalhe[] = [
   },
   {
     id: "pato",
-    titulo: "Jogador de Herbicida em café novo",
-    subTitulo: "",
+    titulo: "Jogador de Herbicida",
+    subTitulo: "Jogador de Herbicida para café novo",
     descricao:
       "Luquinha e João Marcos favor, colocar uma descrição desse produto",
     fotos: [
@@ -74,7 +74,7 @@ export default function ProdutoCard() {
       {produtos.map((produto) => (
         <div key={`produto-${produto.id}`} className="flex justify-center mt-5">
           <div className="flex flex-col md:flex-row items-center justify-center w-4/5">
-            <div className="md:columns-3 space-y-4 basis-2/3">
+            <div className="basis-2/3 grid md:grid-cols-3 gap-2">
               {produto.fotos.map((fotos, index) => (
                 <ProdutoCardImagem
                   key={index}

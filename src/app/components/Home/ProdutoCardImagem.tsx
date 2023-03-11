@@ -9,7 +9,7 @@ interface ProdutoCardImagemProps {
 export default function ProdutoCardImagem(props: ProdutoCardImagemProps) {
   return (
     <Image
-      className={`${props.className} rounded-lg shadow-lg shadow-amber-900`}
+      className={`${props.className} rounded-lg shadow-lg shadow-amber-900 hover:opacity-75`}
       src={`/img/${props.src}`}
       alt={`${props.src}`}
       width={200}

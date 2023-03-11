@@ -4,31 +4,29 @@ const callouts = [
     description: "de palha, esterco e compostos.",
     imageSrc: "/img/rosca-esparramadora/1.png",
     imageAlt: "rosca esparramadora",
-    href: "#",
+    href: "/",
   },
   {
     name: "Vassourão de terreiro de café",
     description: "com 3 'carreiras' - Para engatar no trator",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
+    imageSrc: "/img/vassourao/1.png",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
+    href: "/",
   },
   {
     name: "Silo Móvel",
     description: "para chupin de máquina de limpar café",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg",
+    imageSrc: "/img/silo/1.png",
     imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
+    href: "/",
   },
 ];
 
 export default function Categoria() {
   return (
     <div className="bg-[#fcf7ea] rounded-md hidden md:block">
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="mx-auto sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
           <h2 className="text-2xl font-bold text-gray-900">Os mais vendidos</h2>
 
