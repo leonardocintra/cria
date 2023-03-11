@@ -34,7 +34,7 @@ export default function Home() {
         />
       </div>
       <Categoria />
-      <ProdutoCard titulo="Rosca Esparramadora" />
+      <ProdutoCard />
     </main>
   );
 }
