@@ -6,6 +6,7 @@ import { FaTractor, FaBars, FaWhatsapp } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { TfiClose } from "react-icons/tfi";
 import NavLink from "./NavLink";
+import WhatsappButton from "./WhatsappButton";
 
 export default function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -39,10 +40,7 @@ export default function Nav() {
         >
           <NavLink href="/contato" descricao="Contato" icone={<FiMail />} />
 
-          <button className="flex items-center bg-red-500 text-white duration-300 px-6 py-2 mx-4 hover:bg-red-700 rounded gap-3">
-            Whatsapp
-            <FaWhatsapp className="text-xl" />
-          </button>
+          <WhatsappButton />
         </ul>
       </nav>
     </div>

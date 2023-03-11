@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="bg-[#fef6e1] text-gray-600">
         <Nav />
-        <div className="m-5 p-5 bg-red-400">{children}</div>
+        <div className="m-5 p-5">{children}</div>
         <Footer />
       </body>
     </html>
