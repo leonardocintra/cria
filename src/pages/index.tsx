@@ -1,10 +1,11 @@
 import Image from "next/image";
-import Categoria from "./components/Home/Categoria";
-import ProdutoCard from "./components/Home/ProdutoCard";
+import RootLayout from "./layout";
+import Categoria from "../components/Home/Categoria";
+import ProdutoCard from "../components/Home/ProdutoCard";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
-    <main className="">
+    <RootLayout>
       <div className="flex justify-center">
         <div className="p-4  md:w-1/2">
           <div className="md:flex justify-center items-center space-x-3 p-5">
@@ -35,6 +36,6 @@ export default function Home() {
       </div>
       <Categoria />
       <ProdutoCard />
-    </main>
+    </RootLayout>
   );
 }

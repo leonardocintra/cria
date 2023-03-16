@@ -25,7 +25,8 @@ export const produtoData: IProdutoDetalhe[] = [
     descricao:
       "Com  3 carreiras, o vassourão da Cristo Rei oferece muito mais eficiência e rapidez varrendo o terreiro após amontoar o café. Geralmente, os vassourões oferecidos hoje no mercado contém apenas 2 carreiras, deixando o trabalho mais lento e laborioso. Mas a Cristo Rei chegou para melhorar esse sistema de varreção de terreiro e deixá-lo muito mais prático e rápido!",
     fotos: [
-      { alt: "vassourao-1", src: "/img/vassourao/1.png" },
+      { alt: "vassourao-1", src: "/img/vassourao/1.jpeg" },
+      { alt: "vassourao-4", src: "/img/vassourao/4.png" },
       { alt: "vassourao-2", src: "/img/vassourao/2.png" },
       { alt: "vassourao-3", src: "/img/vassourao/3.png" },
     ],

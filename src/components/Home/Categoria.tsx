@@ -9,7 +9,7 @@ const callouts = [
   {
     name: "Vassourão de terreiro de café",
     description: "com 3 'carreiras' - Para engatar no trator",
-    imageSrc: "/img/vassourao/1.png",
+    imageSrc: "/img/vassourao/2.png",
     imageAlt:
       "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
     href: "/",

@@ -12,7 +12,7 @@ export default function Nav() {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <div className="md:flex md:justify-center md:mt-5">
+    <div className="md:flex md:justify-center pt-5">
       <nav className="p-5 md:flex md:items-center md:justify-between border-b-2 border-gray-400 md:w-3/4">
         <div className="flex justify-between items-center">
           <span className="text-2xl font-[Poppins] cursor-pointer">
