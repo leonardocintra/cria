@@ -14,10 +14,9 @@ module.exports = {
         sono: ["Sono"],
         calligraffitti: ["Calligraffitti"],
         poppins: ["Poppins"],
+        montserrat: ["Montserrat"],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
