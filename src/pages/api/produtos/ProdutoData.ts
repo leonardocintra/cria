@@ -1,4 +1,4 @@
-import IProdutoDetalhe from "../../interfaces/IProduto";
+import IProdutoDetalhe from "../../../interfaces/IProduto";
 
 export const produtoData: IProdutoDetalhe[] = [
   {
