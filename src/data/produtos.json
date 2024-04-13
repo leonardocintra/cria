@@ -1,0 +1,30 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "slug": "vassourao",
+      "nome": "Vassourão",
+      "descricao": "alfjasdklkdfjaskljdfjaksdfjljaskjdffja skfjasçkl",
+      "especificacoes": {
+        "tamanho": 100,
+        "peso": 100,
+        "altura": 100,
+        "largura": 100,
+        "comprimento": 100
+      }
+    },
+    {
+      "id": 2,
+      "slug": "silo",
+      "nome": "Silo",
+      "descricao": "alfjasdklkdfjaskljdfjaksdfjljaskjdffja skfjasçkl",
+      "especificacoes": {
+        "tamanho": 100,
+        "peso": 100,
+        "altura": 100,
+        "largura": 100,
+        "comprimento": 100
+      }
+    }
+  ]
+}
