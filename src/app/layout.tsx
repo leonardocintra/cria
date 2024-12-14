@@ -47,8 +47,11 @@ export default function RootLayout({
 
         <footer className="bg-green-800 text-white py-8">
           <div className="container mx-auto text-center">
-            © {new Date().getFullYear()} Cristo Rei Implementos. Todos os
+            © 2023 - {new Date().getFullYear()} | Cristo Rei Implementos. Todos os
             direitos reservados.
+          </div>
+          <div className="container mx-auto text-center">
+            Desenvolvido por Leonardo Cintra - <Link target="_blank" href={"https://x.com/leonardoncintra"}>@leonardoncintra</Link> 
           </div>
         </footer>
       </body>
