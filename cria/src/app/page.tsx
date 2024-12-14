@@ -9,50 +9,64 @@ const products = [
     name: "Vassourão de Terreiro",
     description:
       "Vassourão de terreiro de café com 3 carreiras para máxima eficiência",
-    image: "/placeholder-vassourao.jpg", // Substitua pela imagem real
+    image: "/img/vassourao/1.jpeg",
   },
   {
     id: "rosca-esparramadora",
     name: "Rosca Esparramadora",
     description: "Esparrame palha, esterco e compostos em menos de 3 minutos",
-    image: "/placeholder-rosca.jpg", // Substitua pela imagem real
+    image: "/img/rosca-esparramadora/1.png",
   },
   {
     id: "jogador-herbicida",
     name: "Jogador de Herbicida",
     description: "Jogador de Herbicida especialmente desenvolvido para café",
-    image: "/placeholder-herbicida.jpg", // Substitua pela imagem real
+    image: "/img/pato/2.png",
   },
   {
     id: "silo-movel",
     name: "Silo Móvel",
     description: "Silo com capacidade para mais de 6.000 litros de café",
-    image: "/placeholder-silo.jpg", // Substitua pela imagem real
+    image: "/img/silo/1.png",
   },
 ];
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">
+      <h1 className="text-4xl font-bold text-green-800 mb-12 text-center">
         Cristo Rei Implementos Agrícolas
       </h1>
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {products.map((product) => (
-          <Card key={product.id}>
-            <CardHeader>
-              <CardTitle>{product.name}</CardTitle>
-            </CardHeader>
-            <CardContent>
+      <div className="space-y-8">
+        {products.map((product, index) => (
+          <Card
+            key={product.id}
+            className="flex flex-col md:flex-row overflow-hidden"
+          >
+            <div
+              className={`md:w-1/2 ${index % 2 === 1 ? "md:order-last" : ""}`}
+            >
               <Image
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover mb-4"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
               />
-              <p className="mb-4">{product.description}</p>
-              <Link href={`/produtos/${product.id}`}>
-                <Button>Ver Detalhes</Button>
+            </div>
+            <CardContent className="md:w-1/2 p-6 flex flex-col justify-center">
+              <h2 className="text-2xl font-bold text-green-800 mb-4">
+                {product.name}
+              </h2>
+              <p className="text-gray-700 mb-6">{product.description}</p>
+              <Link href={`/produtos/${product.id}`} className="self-start">
+                <Button
+                  variant="outline"
+                  className="border-green-600 text-green-700 hover:bg-green-50"
+                >
+                  Ver Detalhes
+                </Button>
               </Link>
             </CardContent>
           </Card>
