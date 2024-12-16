@@ -103,7 +103,7 @@ export default function Home() {
 }
 
 function ProductCarousel({ product }: { product: IProduct }) {
-  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));
 
   return (
     <Carousel
