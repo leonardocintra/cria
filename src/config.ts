@@ -1,3 +1,5 @@
+import { IProduct } from "./interfaces/IProduct";
+
 export const teams = [
   {
     name: "João Marcos",
@@ -13,7 +15,7 @@ export const teams = [
   },
 ];
 
-export const products = [
+export const products: IProduct[] = [
   {
     id: "vassourao",
     name: "Vassourão de Terreiro",

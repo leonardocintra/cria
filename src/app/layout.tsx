@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -32,23 +27,6 @@ export default function RootLayout({
                 className="object-contain"
               />
             </Link>
-            {/* <NavigationMenu>
-              <NavigationMenuList className="flex space-x-4 text-2xl sm:text-4xl">
-                <NavigationMenuItem>
-                  <Link href="/" className="text-white hover:text-vermei transition-colors">
-                    Home
-                  </Link>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <Link
-                    href="/contato"
-                    className="text-white hover:text-vermei transition-colors"
-                  >
-                    Contato
-                  </Link>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu> */}
           </div>
         </header>
 

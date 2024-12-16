@@ -10,9 +10,10 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
-import React from "react";
+import React, { useRef } from "react";
 import { teams, products } from "@/config";
 import { PhoneCall } from "lucide-react";
+import { IProduct } from "@/interfaces/IProduct";
 
 export default function Home() {
   function handleWhastapp(numero: string) {
@@ -72,56 +73,58 @@ export default function Home() {
       </div>
 
       <div className="space-y-8">
-        {products.map((product) => {
-          const plugin = React.useRef(
-            Autoplay({ delay: 2000, stopOnInteraction: false })
-          );
-
-          return (
-            <Card
-              key={product.id}
-              className="flex flex-col md:flex-row overflow-hidden"
-            >
-              <div className="md:w-1/2">
-                <Carousel
-                  className="w-full"
-                  plugins={[plugin.current]}
-                  onMouseEnter={plugin.current.stop}
-                  onMouseLeave={plugin.current.reset}
+        {products.map((product: IProduct) => (
+          <Card
+            key={product.id}
+            className="flex flex-col md:flex-row overflow-hidden"
+          >
+            <div className="md:w-1/2">
+              <ProductCarousel product={product} />
+            </div>
+            <CardContent className="md:w-1/2 p-6 flex flex-col justify-center">
+              <h2 className="text-2xl font-bold text-green-800 mb-4">
+                {product.name}
+              </h2>
+              <p className="text-gray-700 mb-6">{product.description}</p>
+              <Link href={`/produtos/${product.id}`} className="self-start">
+                <Button
+                  variant="outline"
+                  className="border-green-600 text-green-700 hover:bg-green-50"
                 >
-                  <CarouselContent>
-                    {product.images.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <Image
-                          src={image}
-                          alt={`${product.name} - Imagem ${index + 1}`}
-                          width={1500}
-                          height={1500}
-                          className="w-full h-full object-cover"
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                </Carousel>
-              </div>
-              <CardContent className="md:w-1/2 p-6 flex flex-col justify-center">
-                <h2 className="text-2xl font-bold text-green-800 mb-4">
-                  {product.name}
-                </h2>
-                <p className="text-gray-700 mb-6">{product.description}</p>
-                <Link href={`/produtos/${product.id}`} className="self-start">
-                  <Button
-                    variant="outline"
-                    className="border-green-600 text-green-700 hover:bg-green-50"
-                  >
-                    Ver Detalhes
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          );
-        })}
+                  Ver Detalhes
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
+  );
+}
+
+function ProductCarousel({ product }: { product: IProduct }) {
+  const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
+
+  return (
+    <Carousel
+      className="w-full"
+      plugins={[plugin.current]}
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={plugin.current.reset}
+    >
+      <CarouselContent>
+        {product.images.map((image, index) => (
+          <CarouselItem key={index}>
+            <Image
+              src={image}
+              alt={`${product.name} - Imagem ${index + 1}`}
+              width={1500}
+              height={1500}
+              className="w-full h-full object-cover"
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   );
 }
