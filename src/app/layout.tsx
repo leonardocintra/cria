@@ -6,6 +6,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Cria - Implementos Agricolas",
@@ -19,33 +20,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
-        <header className="bg-green-700 text-white py-4">
-          <div className="container mx-auto flex justify-between items-center">
-            <div className="text-2xl font-bold">Cristo Rei Implementos</div>
-            <NavigationMenu>
-              <NavigationMenuList className="flex space-x-4">
+      <body className="bg-black">
+        <header className="bg-slate-400 text-white py-4">
+          <div className="container mx-auto flex justify-between items-center px-3">
+            <Link href="/">
+              <Image
+                src="/img/logo.png"
+                alt="Cristo Rei Implementos Logo"
+                width={200}
+                height={50}
+                className="object-contain"
+              />
+            </Link>
+            {/* <NavigationMenu>
+              <NavigationMenuList className="flex space-x-4 text-2xl sm:text-4xl">
                 <NavigationMenuItem>
-                  <Link href="/" className="text-white hover:text-green-200">
+                  <Link href="/" className="text-white hover:text-vermei transition-colors">
                     Home
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link
                     href="/contato"
-                    className="text-white hover:text-green-200"
+                    className="text-white hover:text-vermei transition-colors"
                   >
                     Contato
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>
-            </NavigationMenu>
+            </NavigationMenu> */}
           </div>
         </header>
 
         <main>{children}</main>
 
-        <footer className="bg-green-800 text-white py-8">
+        <footer className="bg-vermei text-white py-8">
           <div className="container mx-auto text-center">
             © 2023 - {new Date().getFullYear()} | Cristo Rei Implementos. Todos
             os direitos reservados.
